@@ -6,7 +6,7 @@
 /*   By: sungjpar <sungjpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 17:48:11 by minkyeki          #+#    #+#             */
-/*   Updated: 2022/09/07 14:50:14 by minkyeki         ###   ########.fr       */
+/*   Updated: 2022/09/09 20:36:37 by sungjpar         ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ extern void		engine_set_mouse_event(t_device *device, int (*f_mouse_press)(), in
 
     /* #src/engine_core/engine.c */
 extern void		engine_push_image(t_device *device, t_image *image, int x, int y);
+
+void	engine_new_image(t_image *image, void* mlx_ptr, int _width, int _height);
 
 #endif /* ENGINE_H */

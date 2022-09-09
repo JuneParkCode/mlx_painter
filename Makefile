@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: parksungjun <parksungjun@student.42seou    +#+  +:+       +#+         #
+#    By: sungjpar <sungjpar@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 12:57:40 by minkyeki          #+#    #+#              #
-#    Updated: 2022/09/09 20:11:56 by parksungjun      ###   ########seoul.kr   #
+#    Updated: 2022/09/09 20:57:23 by sungjpar         ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,11 @@ ENGINE_SRCS = $(addsuffix .c, $(addprefix $(ENGINE_CORE_DIR)/, $(ENGINE_CORE_SRC
 MYAPP_DIR					= painter
 
 # MYAPP-SOURCE
-MYAPP_SRC					=	main \
-								viewport_render\
+MYAPP_SRC					=	src/main \
+								src/render/render_layer \
+								src/render/render_panel \
+								src/render/render_viewport \
+								src/color_picker/put_colors_to_color_picker \
 								
 
 # MYAPP-SOURCE AL
@@ -95,7 +98,7 @@ WHITE = \033[0;97m
 NAME			= minirt
 CC				= cc
 # CCFLAGS		= -Werror -Wextra -Wall
-CCFLAGS			= -Werror -Wextra -Wall -g3 -fsanitize=address
+CCFLAGS			= #-Werror -Wextra -Wall -g3 -fsanitize=address
 RM				= rm -f
 
 MLX_MACOS_COMPILE_FLAGS = -L$(LIBRARY_DIR)/mms -lmlx -framework Cocoa -framework Metal -framework MetalKit -framework QuartzCore
