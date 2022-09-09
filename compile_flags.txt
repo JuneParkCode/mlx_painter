@@ -1,0 +1,6 @@
+-I
+./library/libft/include
+-I
+./engine/include
+-I
+./myapp/include
